@@ -1,8 +1,9 @@
-((target) => {
-	const helloSpeaker = new Object();
-	const speakWord = 'Hello';
-
-	helloSpeaker.speak = (name) => console.log(`${speakWord} ${name}`);
-
-	target.helloSpeaker = helloSpeaker;
-})(window);
+(function (window) {  
+    var helloSpeaker = {};
+    var speakWord = "Hello";
+    
+    helloSpeaker.speak = function (names) {
+      console.log(speakWord + " " + names);
+    }
+        window.helloSpeaker = helloSpeaker;
+    })(window);
